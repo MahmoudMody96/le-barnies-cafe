@@ -316,3 +316,6 @@ html{scroll-padding-top:88px}
 }
 
 /* نهاية style.css */
+
+/* مرساة الرئيسية: عنصر شفاف يغطي منطقة الهيرو ليُفعَّل scroll-spy ويرجع سكرول الصفحة للأعلى */
+#top{position:absolute;top:0;right:0;left:0;height:min(72vh,720px);pointer-events:none}
