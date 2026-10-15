@@ -186,11 +186,7 @@
 .hero-b-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-ghost{background:rgba(255,253,247,.1);border:1px solid rgba(255,253,247,.55);color:#fffdf7;backdrop-filter:blur(6px);display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 22px;border-radius:28px;font-size:13px;font-weight:800;transition:background .2s,transform .25s}
 .btn-ghost:hover{background:rgba(255,253,247,.2);transform:translateY(-2px)}
-.hero-b-strip{position:relative;z-index:2;display:flex;gap:clamp(18px,3.4vw,38px);justify-content:center;align-items:flex-start;padding:8px 0 46px;width:min(1240px,calc(100% - 48px));margin:0 auto;flex-wrap:wrap}
-/* إصلاح عيب التصميم الأصلي: الـ span كان على -34px مع overflow:hidden فكان مقصوصًا/مخفيًا تمامًا */
-.v-tile{position:relative;background:transparent;border:0;box-shadow:none;overflow:visible;border-radius:0;width:auto;height:auto;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:10px}
-.v-tile img{width:clamp(96px,10.5vw,128px);height:clamp(96px,10.5vw,128px);border-radius:50%;object-fit:cover;border:2px solid rgba(233,207,143,.85);box-shadow:0 16px 40px rgba(1,15,10,.5),0 0 0 6px rgba(255,253,247,.08)}
-.v-tile span{position:static;color:#fffdf7;font-size:12.5px;font-weight:800;text-shadow:0 1px 10px rgba(0,0,0,.65);background:rgba(3,27,19,.45);border:1px solid rgba(233,207,143,.3);padding:4px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+/* تم حذف شريط صور المنتجات من الهيرو (طلب المستخدم) — v9 */
 /* إصلاح خلفية الختام: المسار كان assets/... من داخل css/ فيكسر الصورة — الصحيح ../assets */
 .closing-photo{background:url("../assets/img/closing-bg.webp") center 45%/cover no-repeat}
 /* توحيد لغة الصور: أبعاد ثابتة تمنع CLS + تباين أغنى + هوفر سينمائي */
@@ -209,9 +205,6 @@ body{font-family:"Cairo","Tajawal","IBM Plex Sans Arabic","Segoe UI",Tahoma,Aria
 .hero-b{min-height:680px;padding-top:76px}
 .hero-b-inner h1{font-size:2.55rem}
 .hero-b-inner p{font-size:13.5px}
-.hero-b-strip{gap:14px;padding-bottom:34px}
-.v-tile img{width:78px;height:78px}
-.v-tile span{font-size:11px;padding:3px 10px}
 }
 /* v5b: توحيد لغة التصوير + إصلاح تباين + فصل طبقات الهيرو عن المحتوى */
 .hero-b .hero-bg img{object-position:center 38%}
@@ -221,13 +214,11 @@ body{font-family:"Cairo","Tajawal","IBM Plex Sans Arabic","Segoe UI",Tahoma,Aria
 .experience-photo{border-radius:18px;overflow:hidden}
 .story-image{min-height:260px}
 .menu-photo img{filter:saturate(1.06) contrast(1.05)}
-.hero-b-strip .v-tile img{filter:saturate(1.1) contrast(1.06)}
 /* منع النصوص الأجنبية داخل الصور من لفت الانتباه: تعتيم سفلي خفيف على كروت الفروع */
 .branch-photo{position:relative}
 .branch-photo:after{content:"";position:absolute;inset:auto 0 0;height:44%;background:linear-gradient(0deg,rgba(2,20,14,.28),transparent);pointer-events:none}
-/* v7: إيقاع الهيرو النهائي — مسافة تنفس + نقاط ثقة + توقيع */
-.hero-b-strip{padding-bottom:60px}
-.hero-trust{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;padding:0 0 34px;color:rgba(253,250,242,.75);font-size:11.5px;font-weight:700}
+/* v7: إيقاع الهيرو — نقاط ثقة بمسافة تنفس بعد حذف الشريط */
+.hero-trust{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;padding:18px 0 42px;color:rgba(253,250,242,.75);font-size:11.5px;font-weight:700}
 .hero-trust span{display:inline-flex;align-items:center;gap:7px}
 .hero-trust i{font-style:normal;color:var(--gold2)}
 .btn-gold{box-shadow:0 10px 28px rgba(185,130,47,.35)}
@@ -314,9 +305,6 @@ html{scroll-padding-top:88px}
 /* نقاط الثقة فوق السطح الفاتح: نص داكن بارز */
 .hero-trust{color:#2b3f34;text-shadow:none}
 .hero-trust i{color:var(--gold)}
-/* شرائح المشروبات: كبسولات فاتحة أنيقة بدل الداكنة */
-.hero-b-strip .v-tile span{background:rgba(255,253,247,.94);color:var(--green);border:1px solid rgba(185,130,47,.45);text-shadow:none;box-shadow:0 6px 18px rgba(6,61,44,.12)}
-.hero-b-strip .v-tile img{border-color:rgba(185,130,47,.65);box-shadow:0 16px 36px rgba(6,61,44,.22),0 0 0 6px rgba(255,253,247,.6)}
 /* الحافة السفلية تندمج بلا حرج مع قسم المميزات الفاتح */
 .hero-b{background:#0a2e22;box-shadow:inset 0 -1px 0 rgba(255,253,247,.65)}
 @media(max-width:720px){
