@@ -296,3 +296,35 @@ html{scroll-padding-top:88px}
 .contact-info a{color:var(--gold2);font-weight:800}
 .contact-info a:hover{color:#fff}
 .hero-trust{color:rgba(253,250,242,.88);text-shadow:0 1px 10px rgba(0,0,0,.5)}
+
+/* v8: هيرو بدون أشخاص + انتقال فاتح احترافي في الجزء السفلي */
+.hero-b .hero-bg img{filter:saturate(1.08) contrast(1.05) brightness(.97);object-position:center 45%}
+.hero-b-veil{
+  background:
+    radial-gradient(115% 78% at 50% 32%,rgba(3,27,19,.5) 0%,rgba(3,27,19,.52) 58%,rgba(3,27,19,.16) 78%,rgba(3,27,19,0) 92%),
+    linear-gradient(0deg,
+      #fffdf7 0%,
+      rgba(255,253,247,.96) 6%,
+      rgba(251,248,239,.72) 13%,
+      rgba(251,248,239,.3) 22%,
+      rgba(2,20,14,.24) 36%,
+      rgba(2,20,14,.32) 55%,
+      rgba(2,20,14,.28) 100%)
+}
+/* نقاط الثقة فوق السطح الفاتح: نص داكن بارز */
+.hero-trust{color:#2b3f34;text-shadow:none}
+.hero-trust i{color:var(--gold)}
+/* شرائح المشروبات: كبسولات فاتحة أنيقة بدل الداكنة */
+.hero-b-strip .v-tile span{background:rgba(255,253,247,.94);color:var(--green);border:1px solid rgba(185,130,47,.45);text-shadow:none;box-shadow:0 6px 18px rgba(6,61,44,.12)}
+.hero-b-strip .v-tile img{border-color:rgba(185,130,47,.65);box-shadow:0 16px 36px rgba(6,61,44,.22),0 0 0 6px rgba(255,253,247,.6)}
+/* الحافة السفلية تندمج بلا حرج مع قسم المميزات الفاتح */
+.hero-b{background:#0a2e22;box-shadow:inset 0 -1px 0 rgba(255,253,247,.65)}
+@media(max-width:720px){
+  .hero-b-veil{background:
+    radial-gradient(130% 70% at 50% 26%,rgba(3,27,19,.52) 0%,rgba(3,27,19,.46) 60%,rgba(3,27,19,0) 85%),
+    linear-gradient(0deg,#fffdf7 0%,rgba(255,253,247,.95) 7%,rgba(251,248,239,.6) 16%,rgba(2,20,14,.2) 30%,rgba(2,20,14,.34) 55%,rgba(2,20,14,.3) 100%)}
+  .hero-trust{color:#2b3f34;font-size:11px}
+  .hero-trust i{color:var(--gold)}
+}
+
+.hero-trust{color:rgba(253,250,242,.88);text-shadow:0 1px 10px rgba(0,0,0,.5)}
