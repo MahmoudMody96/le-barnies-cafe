@@ -1,0 +1,4 @@
+.playwright-cli/
+.workbuddy-ai/
+_gen*/
+node_modules/

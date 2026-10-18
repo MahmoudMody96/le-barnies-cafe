@@ -1,5 +1,7 @@
 .git
 .workbuddy-ai
+.playwright-cli
+_gen
 _b*.jpg
 _cand*.jpg
 _hero*.png
