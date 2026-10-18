@@ -362,3 +362,6 @@ body.has-order .toast{bottom:98px}
   .footer-bar .contact-info span[aria-hidden]{display:none}
   .open-badge{font-size:10px;padding:4px 9px}
 }
+
+/* v12: قسم الأسئلة بقى كارتين — نضبط الشبكة على مقاسهم */
+@media(min-width:721px){#faq .reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
