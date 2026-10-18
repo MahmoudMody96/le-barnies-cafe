@@ -2,3 +2,5 @@
 .workbuddy-ai/
 _gen*/
 node_modules/
+.workbuddy/
+.wbapp_*.genie
