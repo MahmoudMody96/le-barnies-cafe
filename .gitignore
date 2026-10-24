@@ -4,3 +4,6 @@ _gen*/
 node_modules/
 .workbuddy/
 .wbapp_*.genie
+.vercel/
+
+.vercel

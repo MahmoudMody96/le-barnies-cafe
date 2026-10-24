@@ -1,0 +1,12 @@
+# لا تُنشر ملفات التطوير والدوكرة مع الموقع
+.git
+.gitignore
+.dockerignore
+Dockerfile
+nginx.conf
+.workbuddy/
+.workbuddy-ai/
+.playwright-cli/
+_gen*/
+node_modules/
+.wbapp_*.genie
